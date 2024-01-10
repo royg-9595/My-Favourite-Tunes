@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<table>
+    <tr>
+        <th><p>Items<span style="margin-right: 200px;"></span><a href="{% url 'songcreate' %}">Add New Song</p></th>
+    </tr>
+    {%for i in Songs %}
+    <tr>
+        <td><a href="{% url 'songview' i.id %}"><h4>{{i.title}}</h4></td>
+    </tr>
+    {%endfor%}
+</table>
+
+{% endblock content %}

@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+{% block content %}
+<p>Add New Song <span style="margin-right: 280px;"></span><a href="{% url 'artistcreate' %}">Add Artist</a></p>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+</form>
+
+{% endblock content %}
